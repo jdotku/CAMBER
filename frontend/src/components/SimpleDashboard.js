@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './SimpleDashboard.css';
 
+const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5001';
+
 export default function SimpleDashboard({ bomData, healthData, onExploreMore, onAcceptFix, onExport }) {
   const [claudeInsights, setClaudeInsights] = useState(null);
   const [loadingClaude,  setLoadingClaude]  = useState(false);
@@ -9,7 +11,7 @@ export default function SimpleDashboard({ bomData, healthData, onExploreMore, on
   useEffect(() => {
     if (!healthData) return;
     setLoadingClaude(true);
-    fetch('http://localhost:5001/api/bom-analyze', {
+    fetch(`${API_BASE}/api/bom-analyze`, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({

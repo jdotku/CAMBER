@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SimpleDashboard from './SimpleDashboard';
 import DeepModeLayout  from './DeepModeLayout';
 
-const API_BASE_URL = 'http://localhost:5001';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
 export default function DeepModeToggle({ bomData, onReset }) {
   const [mode,       setMode]       = useState('simple');

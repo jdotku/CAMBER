@@ -11,7 +11,7 @@
 import React, { useState } from 'react';
 import './RecommendationCard.css';
 
-const API_BASE = 'http://localhost:5001';
+const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
 function RecommendationCard({ part, riskLevel }) {
   const [explanation, setExplanation]   = useState(null);

@@ -3,7 +3,7 @@ import './App.css';
 import BOMUploader     from './components/BOMUploader';
 import DeepModeToggle  from './components/DeepModeToggle';
 
-const API_BASE_URL = 'http://localhost:5001';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
 function App() {
   const [bomData,      setBomData]      = useState([]);

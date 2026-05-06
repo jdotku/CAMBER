@@ -11,7 +11,7 @@
 import React, { useState } from 'react';
 import './DetailedPartView.css';
 
-const API_BASE = 'http://localhost:5001';
+const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
 // Cost exposure if the supplier is disrupted:
 // rough estimate = quantity × unit_cost × weeks of delay / 52

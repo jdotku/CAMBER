@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './RiskAlternativesTab.css';
 import DeepModeClaude from './DeepModeClaude';
 
-const API_BASE = 'http://localhost:5001';
+const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
 export default function RiskAlternativesTab({ bomData, preSelectedPartId, selectedPart: preSelectedPartObj }) {
   const highAndMedium = bomData.filter(p => p.risk_level !== 'Low');

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './DeepModeClaude.css';
 
+const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5001';
+
 export default function DeepModeClaude({ bomData, activeTab, selectedPart }) {
   const [claudeContext, setClaudeContext] = useState(null);
   const [loading,       setLoading]       = useState(false);
@@ -19,7 +21,7 @@ export default function DeepModeClaude({ bomData, activeTab, selectedPart }) {
     if (!selectedPart) return;
     setLoading(true);
     try {
-      const res  = await fetch('http://localhost:5001/api/claude-part-analysis', {
+      const res  = await fetch(`${API_BASE}/api/claude-part-analysis`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ part: selectedPart, allParts: bomData }),
@@ -35,7 +37,7 @@ export default function DeepModeClaude({ bomData, activeTab, selectedPart }) {
   async function fetchNetworkAnalysis() {
     setLoading(true);
     try {
-      const res  = await fetch('http://localhost:5001/api/claude-network-analysis', {
+      const res  = await fetch(`${API_BASE}/api/claude-network-analysis`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ bomData }),
@@ -51,7 +53,7 @@ export default function DeepModeClaude({ bomData, activeTab, selectedPart }) {
   async function fetchBOMContextAnalysis() {
     setLoading(true);
     try {
-      const res  = await fetch('http://localhost:5001/api/claude-bom-context', {
+      const res  = await fetch(`${API_BASE}/api/claude-bom-context`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ bomData }),
