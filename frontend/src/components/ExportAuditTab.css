@@ -1,0 +1,139 @@
+/* ExportAuditTab */
+
+.export-audit-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.export-audit-tab h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+/* ---- SHARED CARD ---- */
+
+.audit-card {
+  border: 1px solid #1E1E1E;
+  border-radius: 8px;
+  padding: 20px;
+  background: #0A0A0A;
+}
+
+.audit-card h3 {
+  margin: 0 0 16px 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888888;
+  font-family: 'Courier New', Courier, monospace;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1A1A1A;
+}
+
+/* ---- EXPORT BUTTONS ---- */
+
+.export-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.export-btn {
+  flex: 1;
+  min-width: 140px;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: Arial, 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.pdf-btn {
+  background: #CC0000;
+  border: 1px solid #CC0000;
+  color: #FFFFFF;
+}
+
+.pdf-btn:hover:not(:disabled) { background: rgba(204,0,0,0.8); }
+.pdf-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.csv-btn {
+  background: #00AA00;
+  border: 1px solid #00AA00;
+  color: #000000;
+}
+
+.csv-btn:hover { background: rgba(0,170,0,0.85); }
+
+.export-note {
+  margin: 0;
+  font-size: 12px;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* ---- AUDIT LOG ---- */
+
+.audit-log {
+  background: #0F0F0F;
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+}
+
+.audit-entry {
+  display: flex;
+  gap: 20px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #111111;
+}
+
+.audit-entry:last-child { border-bottom: none; }
+
+.audit-ts     { color: #555555; white-space: nowrap; min-width: 80px; }
+.audit-action { color: #AAAAAA; }
+
+/* ---- COMPLIANCE ---- */
+
+.compliance-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.check-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border-left: 3px solid #333333;
+  background: #111111;
+  flex-wrap: wrap;
+}
+
+.check-ok   { border-left-color: #00AA00; }
+.check-warn { border-left-color: #CC0000; }
+
+.check-label {
+  font-weight: bold;
+  font-size: 13px;
+  color: #CCCCCC;
+}
+
+.check-status {
+  font-size: 12px;
+  color: #888888;
+}
+
+.check-ok   .check-status { color: #44CC44; }
+.check-warn .check-status { color: #FF8888; }

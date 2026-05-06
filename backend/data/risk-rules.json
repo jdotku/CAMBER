@@ -1,0 +1,33 @@
+{
+  "geopolitical_zones": {
+    "Taiwan Strait": 9,
+    "South China Sea": 7,
+    "Europe": 2,
+    "Pacific": 2,
+    "East Asia": 4
+  },
+  "environmental_risks": {
+    "monsoon_season": 5,
+    "earthquake_prone": 4,
+    "flood_prone": 6,
+    "drought_prone": 3,
+    "typhoon_season": 7
+  },
+  "supply_chain_risks": {
+    "single_source": 8,
+    "long_lead_time": 4,
+    "obsolescence_risk": 5,
+    "price_volatility": 3
+  },
+  "news_keywords": {
+    "strike": 6,
+    "typhoon": 7,
+    "flood": 6,
+    "tariff": 5,
+    "embargo": 9,
+    "fire": 7,
+    "shortage": 5,
+    "recall": 6,
+    "sanction": 8
+  }
+}

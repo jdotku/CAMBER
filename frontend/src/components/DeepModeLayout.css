@@ -1,0 +1,25 @@
+.deep-mode-layout {
+  display: flex;
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.deep-mode-content {
+  flex: 1;
+  margin-left: 280px;
+  padding: 40px;
+  overflow-y: auto;
+  color: #FFFFFF;
+}
+
+.content-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .deep-mode-content {
+    margin-left: 240px;
+    padding: 24px;
+  }
+}

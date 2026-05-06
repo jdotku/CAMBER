@@ -1,0 +1,192 @@
+/* SupplyNetworkTab */
+
+.supply-network-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.supply-network-tab h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+/* ---- TIER VISUALIZATION ---- */
+
+.network-viz {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tier-you {
+  text-align: center;
+}
+
+.tier-block {
+  border: 1px solid #1E1E1E;
+  border-radius: 8px;
+  padding: 20px;
+  background: #0A0A0A;
+}
+
+.tier-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666666;
+  margin-bottom: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.tier-connector {
+  text-align: center;
+  color: #333333;
+  font-size: 20px;
+  padding: 6px 0;
+  line-height: 1;
+}
+
+.node-you {
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;
+  padding: 16px 32px;
+  background: #111111;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+/* ---- NODE GRID ---- */
+
+.nodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.node {
+  border: 1px solid #2A2A2A;
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: #111111;
+  text-align: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.node:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.risk-border-high   { border-color: #440000; background: rgba(204,0,0,0.06); }
+.risk-border-medium { border-color: #001a44; background: rgba(0,102,204,0.06); }
+.risk-border-low    { border-color: #003300; background: rgba(0,170,0,0.05); }
+
+.node-name {
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #FFFFFF;
+  word-break: break-word;
+}
+
+.node-meta {
+  font-size: 11px;
+  color: #666666;
+  margin-bottom: 4px;
+}
+
+.node-risk {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.risk-text-high   { color: #CC0000; }
+.risk-text-medium { color: #0066CC; }
+.risk-text-low    { color: #00AA00; }
+
+/* ---- CONCENTRATION ANALYSIS ---- */
+
+.concentration-analysis {
+  border: 1px solid #1E1E1E;
+  border-radius: 8px;
+  padding: 20px;
+  background: #0A0A0A;
+}
+
+.conc-header {
+  margin-bottom: 16px;
+}
+
+.conc-header h3 {
+  margin: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888888;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.analysis-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.analysis-card {
+  border: 1px solid #1E1E1E;
+  border-left: 3px solid #333333;
+  border-radius: 6px;
+  padding: 12px;
+  background: #111111;
+}
+
+.conc-border-high   { border-left-color: #CC0000; }
+.conc-border-medium { border-left-color: #0066CC; }
+.conc-border-low    { border-left-color: #00AA00; }
+
+.analysis-name {
+  font-weight: bold;
+  font-size: 13px;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.analysis-share {
+  font-size: 12px;
+  color: #888888;
+  margin-bottom: 4px;
+}
+
+.analysis-risk {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.concentration-insight {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.insight-warn {
+  background: rgba(204,0,0,0.08);
+  border-left: 3px solid #CC0000;
+  color: #FF8888;
+}
+
+.insight-ok {
+  background: rgba(0,170,0,0.06);
+  border-left: 3px solid #00AA00;
+  color: #44CC44;
+}

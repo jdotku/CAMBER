@@ -1,0 +1,11 @@
+part_id,part_name,manufacturer,part_number,quantity,unit_cost
+1,ARM Cortex Processor,NVIDIA,A100-80GB,2,15000.00
+2,DRAM Module,Samsung,DDR5-6000,8,120.00
+3,Power Inductor,Murata,LQH32CN-R47M,100,0.45
+4,USB Connector,TE Connectivity,2013092-1,50,2.30
+5,Thermal Paste,Shin-Etsu,X-23-500D,10,8.50
+6,Capacitor,TDK,C3225X5R1A106M230KA,1000,0.08
+7,Wireless Module,Qualcomm,SDX65,15,450.00
+8,Power Management IC,Texas Instruments,LM25149,200,12.50
+9,NAND Flash,SK Hynix,H9CCNNNBJTMLAR,20,45.00
+10,Processor,TSMC,ARM Cortex A78,5,3200.00

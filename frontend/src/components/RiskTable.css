@@ -1,0 +1,178 @@
+/* RiskTable — dark theme, wide columns with horizontal scroll */
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 2px solid #1E1E1E;
+  border-radius: 8px;
+}
+
+.risk-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 2000px;
+  font-size: 13px;
+  background: #0A0A0A;
+}
+
+/* ---- HEADER ---- */
+
+.risk-table thead {
+  background: #111111;
+}
+
+.risk-table th {
+  padding: 12px 14px;
+  text-align: left;
+  color: #888888;
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  border-bottom: 1px solid #1E1E1E;
+  border-right: 1px solid #1A1A1A;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.risk-table th:last-child { border-right: none; }
+
+/* ---- ROWS ---- */
+
+.risk-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #111111;
+  border-right: 1px solid #111111;
+  color: #CCCCCC;
+  vertical-align: top;
+}
+
+.risk-table td:last-child { border-right: none; }
+.risk-table tbody tr:last-child td { border-bottom: none; }
+.risk-table tbody tr:hover td { background: #111111; }
+
+/* Row tints by risk */
+.row-risk-high   td { background: rgba(204,0,0,0.04); }
+.row-risk-medium td { background: rgba(0,102,204,0.04); }
+.row-risk-low    td { background: transparent; }
+
+/* ---- COLUMN WIDTHS ---- */
+
+.col-id      { width: 44px; color: #555555; font-size: 11px; white-space: nowrap; }
+.col-name    { min-width: 180px; font-weight: bold; color: #FFFFFF; }
+.col-country { min-width: 100px; white-space: nowrap; }
+.col-number  { min-width: 100px; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.col-keywords { min-width: 140px; }
+.col-factors  { min-width: 220px; color: #AAAAAA; font-size: 12px; }
+.col-event    { min-width: 220px; color: #AAAAAA; font-size: 12px; }
+.col-rec      { min-width: 320px; color: #AAAAAA; font-size: 12px; }
+
+/* ---- SCORE BADGE ---- */
+
+.score-badge {
+  font-weight: bold;
+  font-size: 13px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.score-high   { color: #CC0000; background: rgba(204,0,0,0.12); }
+.score-medium { color: #0066CC; background: rgba(0,102,204,0.12); }
+.score-low    { color: #00AA00; background: rgba(0,170,0,0.1); }
+
+/* ---- RISK BADGE ---- */
+
+.risk-badge {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 8px;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.risk-high   { background: rgba(204,0,0,0.2);    color: #FF6666; border: 1px solid #660000; }
+.risk-medium { background: rgba(0,102,204,0.15); color: #6699FF; border: 1px solid #003366; }
+.risk-low    { background: rgba(0,170,0,0.12);   color: #44CC44; border: 1px solid #003300; }
+
+/* ---- NEWS KEYWORD PILLS ---- */
+
+.keyword-pills {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.kw-pill {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: #1A1A1A;
+  color: #AAAAAA;
+  border: 1px solid #333333;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+}
+
+.kw-critical { border-color: #660000; background: rgba(204,0,0,0.15); color: #FF8888; }
+.kw-high     { border-color: #663300; background: rgba(180,80,0,0.12); color: #FF9966; }
+.kw-medium   { border-color: #003366; background: rgba(0,100,200,0.12); color: #88AAFF; }
+.kw-low      { border-color: #333333; color: #888888; }
+
+.kw-none { color: #444444; }
+
+/* ---- LIVE STATUS ---- */
+
+.live-status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.live-status.in-stock  { background: rgba(0,170,0,0.2);   color: #44CC44; }
+.live-status.available { background: rgba(0,102,204,0.15); color: #6699FF; }
+.live-status.long-lead { background: rgba(204,0,0,0.2);   color: #FF6666; }
+
+/* ---- ALTERNATIVE AVAILABLE ---- */
+
+.col-alt-avail { white-space: nowrap; }
+
+.alt-yes { color: #44CC44; font-weight: bold; font-size: 12px; }
+.alt-no  { color: #444444; }
+
+/* ---- FIND ALTERNATIVE BUTTON ---- */
+
+.find-alternative-btn {
+  background: transparent;
+  border: 1px solid #CC0000;
+  color: #FF6666;
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Arial, 'Segoe UI', sans-serif;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.find-alternative-btn:hover {
+  background: #CC0000;
+  color: #FFFFFF;
+}
+
+/* ---- EMPTY STATE ---- */
+
+.empty-state {
+  text-align: center;
+  color: #444444;
+  padding: 48px;
+  font-style: italic;
+}

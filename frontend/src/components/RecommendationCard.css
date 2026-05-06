@@ -1,0 +1,193 @@
+/* RecommendationCard — dark theme */
+
+.recommendation-card {
+  border: 2px solid #1E1E1E;
+  border-left: 4px solid #333333;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  background: #0A0A0A;
+}
+
+.recommendation-card.high   { border-left-color: #CC0000; }
+.recommendation-card.medium { border-left-color: #0066CC; }
+.recommendation-card.low    { border-left-color: #00AA00; }
+
+/* ---- HEADER ---- */
+
+.rec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.rec-header h4 {
+  font-size: 15px;
+  color: #FFFFFF;
+  margin: 0 0 4px 0;
+  font-weight: bold;
+}
+
+.rec-manufacturer {
+  font-size: 12px;
+  color: #666666;
+}
+
+.rec-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.ai-badge {
+  font-size: 10px;
+  font-weight: bold;
+  background: #FFFFFF;
+  color: #000000;
+  padding: 3px 8px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.rec-score-badge {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.score-high   { color: #CC0000; background: rgba(204,0,0,0.12);   border: 1px solid #440000; }
+.score-medium { color: #0066CC; background: rgba(0,102,204,0.12); border: 1px solid #001a44; }
+.score-low    { color: #00AA00; background: rgba(0,170,0,0.1);    border: 1px solid #003300; }
+
+/* ---- TYPE BADGE ---- */
+
+.recommendation-type-badge {
+  font-size: 10px;
+  padding: 2px 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.recommendation-type-badge.claude     { background: #FFFFFF; color: #000000; }
+.recommendation-type-badge.rule-based { background: transparent; border: 1px solid #333333; color: #666666; }
+
+/* ---- CONTENT ---- */
+
+.recommendation-text {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #CCCCCC;
+  margin-bottom: 14px;
+  white-space: pre-wrap;
+}
+
+.rec-events {
+  margin-bottom: 12px;
+}
+
+.rec-events-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #555555;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.recent-events {
+  font-size: 12px;
+  color: #888888;
+  padding-left: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.rec-factors {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.rec-factor-tag {
+  border: 1px solid #2A2A2A;
+  padding: 2px 8px;
+  font-size: 10px;
+  color: #888888;
+  background: #111111;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ---- ALTERNATIVES ---- */
+
+.alternatives-section {
+  border-top: 1px solid #1A1A1A;
+  padding-top: 12px;
+  margin-bottom: 12px;
+}
+
+.alternatives-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #555555;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.alternatives-list {
+  font-size: 12px;
+  color: #AAAAAA;
+  padding-left: 16px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* ---- EXPLAIN BUTTON ---- */
+
+.explain-btn {
+  background: transparent;
+  border: 1px solid #333333;
+  color: #AAAAAA;
+  padding: 7px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: border-color 0.15s, color 0.15s;
+  margin-bottom: 10px;
+  font-family: Arial, 'Segoe UI', sans-serif;
+}
+
+.explain-btn:hover:not(:disabled) {
+  background: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.explain-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.explain-text {
+  border: 1px solid #1E1E1E;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #CCCCCC;
+  background: #0F0F0F;
+  white-space: pre-wrap;
+}

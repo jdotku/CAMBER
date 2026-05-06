@@ -1,0 +1,39 @@
+/* ExportButton — dark theme */
+
+.export-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.export-button {
+  background: transparent;
+  border: 1px solid #444444;
+  color: #AAAAAA;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Arial, 'Segoe UI', sans-serif;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.export-button:hover {
+  background: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.export-success {
+  font-size: 11px;
+  color: #44CC44;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: 1px solid #00AA00;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background: rgba(0,170,0,0.08);
+}

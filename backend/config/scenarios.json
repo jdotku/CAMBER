@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Taiwan Strait Escalation",
+    "type": "geopolitical_escalation",
+    "regions": ["Taiwan Strait"],
+    "severityMultiplier": 1.8,
+    "description": "Military tensions spike in the Taiwan Strait, threatening semiconductor supply from TSMC and other Taiwanese manufacturers.",
+    "probability": "Medium",
+    "impact": "Critical",
+    "affectedTime": "2-4 weeks"
+  },
+  {
+    "id": 2,
+    "name": "Port Strike in China",
+    "type": "port_closure",
+    "regions": ["Shanghai", "Shenzhen", "East China", "East Asia"],
+    "severityMultiplier": 1.5,
+    "description": "Labor disputes halt major Chinese export ports, delaying shipments across all Asia-sourced components.",
+    "probability": "Low",
+    "impact": "High",
+    "affectedTime": "1-3 weeks"
+  },
+  {
+    "id": 3,
+    "name": "Monsoon Season Disruption",
+    "type": "natural_disaster",
+    "regions": ["East Asia", "Pacific", "Southeast Asia"],
+    "severityMultiplier": 1.3,
+    "description": "Seasonal heavy rainfall floods logistics routes and factory floors across East and Southeast Asia.",
+    "probability": "High",
+    "impact": "Medium",
+    "affectedTime": "June-September"
+  },
+  {
+    "id": 4,
+    "name": "Semiconductor Tariffs",
+    "type": "tariff_war",
+    "regions": ["Taiwan Strait", "East Asia"],
+    "costMultiplier": 1.15,
+    "severityMultiplier": 1.0,
+    "description": "New US-China trade restrictions impose 15% tariffs on semiconductor imports from Asia.",
+    "probability": "Medium",
+    "impact": "High",
+    "affectedTime": "Ongoing"
+  }
+]

@@ -1,0 +1,214 @@
+/* RiskAnalysis — dark theme (legacy component kept for drill-through) */
+
+.risk-analysis {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ra-section {
+  border: 1px solid #1E1E1E;
+  border-radius: 8px;
+  padding: 20px 24px;
+  background: #0A0A0A;
+}
+
+.ra-section h2 {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #888888;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #1A1A1A;
+  padding-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+}
+
+.ra-all-clear {
+  color: #44CC44;
+  font-size: 13px;
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 2px;
+}
+
+/* ---- CRITICAL SECTION ---- */
+
+.critical-section {
+  border-left: 4px solid #CC0000;
+  background: rgba(204,0,0,0.04);
+}
+
+.critical-section h2 { color: #FF6666; }
+
+.critical-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.critical-item {
+  border: 1px solid #1E1E1E;
+  border-left: 3px solid #CC0000;
+  border-radius: 6px;
+  padding: 14px 16px;
+  background: #0F0F0F;
+}
+
+.critical-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.critical-item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.critical-part-name {
+  font-size: 15px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.critical-score {
+  font-size: 22px;
+  font-weight: bold;
+  color: #CC0000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.critical-meta {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+.critical-reason {
+  font-size: 12px;
+  color: #888888;
+  margin-bottom: 12px;
+  border-left: 2px solid #2A2A2A;
+  padding-left: 10px;
+}
+
+/* ---- INLINE RISK BADGES ---- */
+
+.risk-badge-inline {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 8px;
+  letter-spacing: 1px;
+  font-family: 'Courier New', Courier, monospace;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 3px;
+}
+
+.risk-badge-inline.high   { background: rgba(204,0,0,0.2);   color: #FF6666; border: 1px solid #660000; }
+.risk-badge-inline.medium { background: rgba(0,102,204,0.15); color: #6699FF; border: 1px solid #003366; }
+.risk-badge-inline.low    { background: rgba(0,170,0,0.12);   color: #44CC44; border: 1px solid #003300; }
+
+/* ---- BUTTONS ---- */
+
+.detail-btn {
+  background: transparent;
+  border: 1px solid #333333;
+  color: #AAAAAA;
+  padding: 7px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Arial, 'Segoe UI', sans-serif;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.detail-btn:hover {
+  background: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.small-detail-btn {
+  background: transparent;
+  border: 1px solid #2A2A2A;
+  color: #888888;
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Arial, 'Segoe UI', sans-serif;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.small-detail-btn:hover {
+  background: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+/* ---- RISK DRIVERS TABLE ---- */
+
+.risk-drivers-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.risk-drivers-table th {
+  text-align: left;
+  padding: 10px 14px;
+  background: #111111;
+  color: #888888;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  white-space: nowrap;
+  font-family: 'Courier New', Courier, monospace;
+  border-bottom: 1px solid #1E1E1E;
+}
+
+.risk-drivers-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #111111;
+  color: #CCCCCC;
+  vertical-align: middle;
+}
+
+.risk-drivers-table tbody tr:last-child td { border-bottom: none; }
+.risk-drivers-table tbody tr:hover td { background: #111111; }
+
+.driver-row.driver-high   td:first-child { border-left: 3px solid #CC0000; }
+.driver-row.driver-medium td:first-child { border-left: 3px solid #0066CC; }
+.driver-row.driver-low    td:first-child { border-left: 3px solid #00AA00; }
+
+.driver-rank {
+  color: #555555;
+  font-weight: bold;
+  white-space: nowrap;
+  width: 44px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.driver-name {
+  font-weight: bold;
+  color: #FFFFFF;
+  min-width: 160px;
+}
+
+.driver-score {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+}
+
+.score-high   { color: #CC0000; }
+.score-medium { color: #0066CC; }
+.score-low    { color: #00AA00; }

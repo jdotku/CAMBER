@@ -1,0 +1,62 @@
+{
+  "NVIDIA": {
+    "country": "USA",
+    "primary_port": "Long Beach, CA",
+    "risk_region": "Pacific",
+    "geopolitical_risk": 1
+  },
+  "Samsung": {
+    "country": "South Korea",
+    "primary_port": "Busan",
+    "risk_region": "East Asia",
+    "geopolitical_risk": 4
+  },
+  "Murata": {
+    "country": "Japan",
+    "primary_port": "Kobe",
+    "risk_region": "East Asia",
+    "geopolitical_risk": 3
+  },
+  "TE Connectivity": {
+    "country": "Switzerland",
+    "primary_port": "Amsterdam",
+    "risk_region": "Europe",
+    "geopolitical_risk": 2
+  },
+  "Qualcomm": {
+    "country": "USA",
+    "primary_port": "Long Beach, CA",
+    "risk_region": "Pacific",
+    "geopolitical_risk": 1
+  },
+  "Texas Instruments": {
+    "country": "USA",
+    "primary_port": "Houston, TX",
+    "risk_region": "Pacific",
+    "geopolitical_risk": 1
+  },
+  "SK Hynix": {
+    "country": "South Korea",
+    "primary_port": "Busan",
+    "risk_region": "East Asia",
+    "geopolitical_risk": 4
+  },
+  "TDK": {
+    "country": "Japan",
+    "primary_port": "Kobe",
+    "risk_region": "East Asia",
+    "geopolitical_risk": 3
+  },
+  "Shin-Etsu": {
+    "country": "Japan",
+    "primary_port": "Kobe",
+    "risk_region": "East Asia",
+    "geopolitical_risk": 3
+  },
+  "TSMC": {
+    "country": "Taiwan",
+    "primary_port": "Kaohsiung",
+    "risk_region": "Taiwan Strait",
+    "geopolitical_risk": 8
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "critical": {
+    "embargo": 10,
+    "war":     9,
+    "sanctions": 8,
+    "conflict": 8
+  },
+  "high": {
+    "strike":    6,
+    "typhoon":   7,
+    "flood":     6,
+    "fire":      7,
+    "shortage":  6,
+    "explosion": 7
+  },
+  "medium": {
+    "tariff":      5,
+    "delay":       4,
+    "recall":      5,
+    "disruption":  5,
+    "protest":     4,
+    "closure":     5
+  },
+  "low": {
+    "price":    2,
+    "demand":   2,
+    "forecast": 1,
+    "slowdown": 2,
+    "warning":  3
+  }
+}

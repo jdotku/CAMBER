@@ -1,0 +1,39 @@
+{
+  "Taiwan": {
+    "recent_events": [
+      "Military drills reported in Taiwan Strait",
+      "TSMC supply chain warnings issued",
+      "Typhoon season preparation underway"
+    ],
+    "risk_score": 8
+  },
+  "South Korea": {
+    "recent_events": [
+      "Heavy rainfall expected near Busan port",
+      "Port operations normal",
+      "Energy pricing stable"
+    ],
+    "risk_score": 4
+  },
+  "USA": {
+    "recent_events": [
+      "Supply chain stable",
+      "No major disruptions reported"
+    ],
+    "risk_score": 1
+  },
+  "Japan": {
+    "recent_events": [
+      "Earthquake monitoring increased in Kansai region",
+      "Manufacturing operations stable"
+    ],
+    "risk_score": 3
+  },
+  "Switzerland": {
+    "recent_events": [
+      "Political stability maintained",
+      "All ports operational"
+    ],
+    "risk_score": 2
+  }
+}

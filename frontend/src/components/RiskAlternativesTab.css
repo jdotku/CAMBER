@@ -1,0 +1,317 @@
+/* RiskAlternativesTab — Spec-Match Engine */
+
+.risk-alternatives-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.risk-alternatives-tab h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+/* ---- LAYOUT ---- */
+
+.alternatives-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ---- PART SELECTOR (LEFT) ---- */
+
+.part-selector {
+  border: 1px solid #2A2A2A;
+  border-radius: 8px;
+  padding: 16px;
+  background: #0A0A0A;
+  max-height: 700px;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+}
+
+.part-selector h3 {
+  margin: 0 0 14px 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666666;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.no-risky-parts {
+  color: #555555;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.part-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.part-card {
+  border: 1px solid #2A2A2A;
+  border-radius: 6px;
+  padding: 12px;
+  background: #111111;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.part-card:hover {
+  border-color: #666666;
+  background: #151515;
+}
+
+.part-card.selected {
+  border-color: #FFFFFF;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.part-card-name {
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 2px;
+  color: inherit;
+}
+
+.part-card-mfg {
+  font-size: 11px;
+  color: #888888;
+  margin-bottom: 8px;
+}
+
+.part-card.selected .part-card-mfg { color: #555555; }
+
+/* ---- RISK BADGES ---- */
+
+.risk-badge-sm {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 3px;
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0.5px;
+}
+
+.risk-high   { background: rgba(204,0,0,0.2);   color: #FF6666; border: 1px solid #660000; }
+.risk-medium { background: rgba(0,102,204,0.15); color: #6699FF; border: 1px solid #003366; }
+.risk-low    { background: rgba(0,170,0,0.12);   color: #44CC44; border: 1px solid #003300; }
+
+.risk-text-high   { color: #CC0000; font-weight: bold; }
+.risk-text-medium { color: #0066CC; font-weight: bold; }
+.risk-text-low    { color: #00AA00; font-weight: bold; }
+
+/* ---- RIGHT SIDE ---- */
+
+.alternatives-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ---- CURRENT PART DETAILS ---- */
+
+.selected-part-details {
+  border: 1px solid #2A2A2A;
+  border-radius: 8px;
+  padding: 20px;
+  background: #0A0A0A;
+  position: sticky;
+  top: 0;
+}
+
+.selected-part-details h3 {
+  margin: 0 0 16px 0;
+  font-size: 15px;
+  color: #FFFFFF;
+  border-bottom: 1px solid #1A1A1A;
+  padding-bottom: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.detail-row .label {
+  color: #666666;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.detail-row .value {
+  color: #CCCCCC;
+  text-align: right;
+}
+
+.recommendation-box {
+  background: #111111;
+  border-left: 3px solid #CC0000;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 14px;
+  font-size: 12px;
+  color: #AAAAAA;
+  line-height: 1.6;
+}
+
+.recommendation-box p { margin: 0; }
+
+/* ---- ALTERNATIVES SECTION ---- */
+
+.alternatives-section h3 {
+  margin: 0 0 14px 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666666;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.loading-msg {
+  color: #555555;
+  font-style: italic;
+  padding: 20px 0;
+}
+
+.no-alternatives {
+  color: #555555;
+  font-style: italic;
+  padding: 20px 0;
+}
+
+/* ---- ALTERNATIVE CARDS ---- */
+
+.alternative-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alternative-card {
+  border: 1px solid #2A2A2A;
+  border-radius: 8px;
+  padding: 16px;
+  background: #0A0A0A;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.alternative-card:hover  { border-color: #666666; }
+.alternative-card.selected { border-color: #00AA00; background: rgba(0,170,0,0.04); }
+
+.alt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.alt-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.alt-spec-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.spec-match-tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: rgba(0,170,0,0.12);
+  color: #44CC44;
+  border: 1px solid #003300;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.alt-details {
+  background: #111111;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+/* ---- IMPACT BOX ---- */
+
+.alt-impact {
+  background: rgba(0,170,0,0.06);
+  border-left: 3px solid #00AA00;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.impact-title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #555555;
+  margin-bottom: 8px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.impact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0;
+  font-size: 12px;
+  color: #888888;
+}
+
+.positive { color: #00AA00; font-weight: bold; }
+.negative { color: #CC0000; font-weight: bold; }
+
+/* ---- SELECT BUTTON ---- */
+
+.select-alt-btn {
+  width: 100%;
+  padding: 9px;
+  background: #00AA00;
+  border: 1px solid #00AA00;
+  color: #000000;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Arial, 'Segoe UI', sans-serif;
+  transition: background 0.15s;
+  letter-spacing: 0.5px;
+}
+
+.select-alt-btn:hover { background: rgba(0,170,0,0.8); }
+
+@media (max-width: 1100px) {
+  .alternatives-container { grid-template-columns: 280px 1fr; }
+  .alternatives-display   { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .alternatives-container { grid-template-columns: 1fr; }
+}

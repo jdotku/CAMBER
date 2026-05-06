@@ -1,0 +1,132 @@
+/* BOMUploader — centered full-viewport dark card */
+
+.bom-uploader-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #000000;
+}
+
+.uploader-card {
+  border: 2px solid #333333;
+  border-radius: 8px;
+  padding: 56px 48px;
+  text-align: center;
+  background: #0A0A0A;
+  width: 100%;
+  max-width: 540px;
+}
+
+.uploader-title {
+  font-size: 40px;
+  letter-spacing: 8px;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  font-family: Arial, 'Segoe UI', sans-serif;
+}
+
+.uploader-subtitle {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #555555;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ---- FILE PICKER LABEL ---- */
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border: 2px dashed #333333;
+  border-radius: 6px;
+  padding: 28px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  background: #050505;
+}
+
+.file-label:hover {
+  border-color: #FFFFFF;
+  background: #111111;
+}
+
+.file-label-icon {
+  font-size: 28px;
+  color: #555555;
+  font-style: normal;
+}
+
+.file-label-text {
+  font-size: 14px;
+  color: #CCCCCC;
+  font-weight: bold;
+}
+
+.file-label-hint {
+  font-size: 11px;
+  color: #444444;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0.5px;
+}
+
+.file-label-selected {
+  font-size: 13px;
+  color: #FFFFFF;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.file-input-hidden {
+  display: none;
+}
+
+/* ---- SUBMIT BUTTON ---- */
+
+.analyze-button {
+  background: #FFFFFF;
+  color: #000000;
+  border: 2px solid #FFFFFF;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: Arial, 'Segoe UI', sans-serif;
+  width: 100%;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.analyze-button:hover:not(:disabled) {
+  background: #E0E0E0;
+}
+
+.analyze-button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ---- SAMPLE HINT ---- */
+
+.sample-hint {
+  margin-top: 24px;
+  color: #444444;
+  font-size: 11px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.sample-hint code {
+  color: #666666;
+  font-size: 11px;
+}
+
+@media (max-width: 480px) {
+  .uploader-card { padding: 40px 24px; }
+}

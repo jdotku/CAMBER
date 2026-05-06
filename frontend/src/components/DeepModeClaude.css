@@ -1,0 +1,107 @@
+.deep-claude-insights {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #0D0D0D;
+  border: 1px solid #2A2A2A;
+  border-radius: 8px;
+}
+
+.insight-loading {
+  text-align: center;
+  color: #555555;
+  font-size: 11px;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.insight-box {
+  margin-bottom: 12px;
+  padding: 14px 16px;
+  background-color: #111111;
+  border-left: 3px solid #2A2A2A;
+  border-radius: 6px;
+}
+
+.insight-box:last-child {
+  margin-bottom: 0;
+}
+
+.insight-box h4 {
+  margin: 0 0 10px 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #555555;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.insight-box p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #CCCCCC;
+}
+
+/* Modifier colors — scoped to avoid conflict with other .recommendation-box classes */
+.deep-claude-insights .context-box           { border-left-color: #00AA00; }
+.deep-claude-insights .context-box h4        { color: #00AA00; }
+.deep-claude-insights .news-box              { border-left-color: #0066CC; }
+.deep-claude-insights .news-box h4           { color: #0066CC; }
+.deep-claude-insights .insight-recommendation-box             { border-left-color: #CC8800; }
+.deep-claude-insights .insight-recommendation-box h4          { color: #CC8800; }
+
+/* ---- NEWS TRAILS ---- */
+
+.news-trails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.news-trail {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.news-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  margin-top: 1px;
+  font-family: 'Courier New', Courier, monospace;
+  flex-shrink: 0;
+}
+
+.news-badge.impact-high {
+  background-color: rgba(204, 0, 0, 0.2);
+  color: #CC0000;
+  border: 1px solid #CC0000;
+}
+
+.news-badge.impact-medium {
+  background-color: rgba(0, 102, 204, 0.2);
+  color: #0066CC;
+  border: 1px solid #0066CC;
+}
+
+.news-badge.impact-low {
+  background-color: rgba(0, 170, 0, 0.2);
+  color: #00AA00;
+  border: 1px solid #00AA00;
+}
+
+.news-trail p {
+  margin: 0;
+  font-size: 12px;
+  color: #AAAAAA;
+  line-height: 1.4;
+}

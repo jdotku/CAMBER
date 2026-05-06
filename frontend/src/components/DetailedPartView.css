@@ -1,0 +1,301 @@
+/* DetailedPartView — dark theme */
+
+.detailed-part-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.back-button {
+  background: transparent;
+  border: 1px solid #333333;
+  color: #AAAAAA;
+  font-size: 13px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+  font-family: Arial, 'Segoe UI', sans-serif;
+  align-self: flex-start;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.back-button:hover {
+  background: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+/* ---- PART HEADER ---- */
+
+.part-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  border: 2px solid #1E1E1E;
+  border-radius: 8px;
+  padding: 22px 24px;
+  background: #0A0A0A;
+  flex-wrap: wrap;
+}
+
+.part-name {
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.part-number {
+  font-size: 12px;
+  color: #555555;
+  margin-bottom: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.part-manufacturer {
+  font-size: 13px;
+  color: #888888;
+}
+
+.risk-badge-large {
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 14px 22px;
+  text-align: center;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.risk-badge-score {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.risk-badge-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 4px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ---- DETAIL SECTIONS ---- */
+
+.detail-section {
+  border: 1px solid #1E1E1E;
+  border-radius: 8px;
+  padding: 20px 24px;
+  background: #0A0A0A;
+}
+
+.detail-section h3 {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #666666;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #1A1A1A;
+}
+
+/* ---- RISK PROFILE ---- */
+
+.risk-score-large {
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.risk-denom {
+  font-size: 24px;
+  font-weight: normal;
+  color: #555555;
+}
+
+.factor-group {
+  margin-bottom: 16px;
+}
+
+.factor-label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #555555;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.factor-list {
+  font-size: 13px;
+  color: #CCCCCC;
+  padding-left: 18px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.keyword-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.keyword-tag {
+  border: 1px solid #2A2A2A;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-family: 'Courier New', Courier, monospace;
+  background: #111111;
+  color: #AAAAAA;
+  border-radius: 3px;
+}
+
+.cat-critical { border-color: #660000; color: #FF8888; background: rgba(204,0,0,0.12); }
+.cat-high     { border-color: #663300; color: #FF9966; background: rgba(180,80,0,0.1); }
+.cat-medium   { border-color: #003366; color: #88AAFF; background: rgba(0,100,200,0.1); }
+.cat-low      { border-color: #2A2A2A; color: #888888; }
+
+.kw-score {
+  font-size: 10px;
+  margin-left: 4px;
+  opacity: 0.6;
+}
+
+.events-list {
+  font-size: 13px;
+  color: #CCCCCC;
+  padding-left: 18px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ---- COST IMPACT ---- */
+
+.cost-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.cost-item {
+  border: 1px solid #1E1E1E;
+  border-radius: 6px;
+  padding: 16px 20px;
+  background: #0F0F0F;
+}
+
+.cost-item-exposure {
+  background: rgba(204,0,0,0.04);
+  border-color: #330000;
+}
+
+.cost-label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #555555;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cost-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.cost-value.exposure { color: #CC0000; }
+
+.cost-sub {
+  font-size: 12px;
+  color: #555555;
+}
+
+/* ---- RECOMMENDATION ---- */
+
+.recommendation-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #CCCCCC;
+  border-left: 3px solid #333333;
+  padding-left: 14px;
+  white-space: pre-wrap;
+}
+
+.ai-inline-badge {
+  font-size: 10px;
+  font-weight: bold;
+  background: #FFFFFF;
+  color: #000000;
+  padding: 2px 8px;
+  margin-left: 10px;
+  border-radius: 3px;
+  vertical-align: middle;
+  letter-spacing: 1px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ---- ALTERNATIVES ---- */
+
+.alternatives-list-detail {
+  font-size: 13px;
+  color: #AAAAAA;
+  padding-left: 20px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* ---- EXPLAIN ---- */
+
+.explain-intro {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.explain-btn-detail {
+  background: transparent;
+  border: 1px solid #333333;
+  color: #AAAAAA;
+  padding: 9px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Arial, 'Segoe UI', sans-serif;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.explain-btn-detail:hover:not(:disabled) {
+  background: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.explain-btn-detail:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.explain-text-detail {
+  border: 1px solid #1E1E1E;
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #CCCCCC;
+  background: #0F0F0F;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 600px) {
+  .cost-grid { grid-template-columns: 1fr; }
+}

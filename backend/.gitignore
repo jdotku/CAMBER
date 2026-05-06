@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+
+# ============================================================
+# NEVER commit .env files — they contain API keys and secrets.
+# Use .env.example (no real values) for documentation instead.
+# ============================================================
+.env
+.env.local
+.env.*.local
