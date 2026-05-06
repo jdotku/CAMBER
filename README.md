@@ -29,7 +29,7 @@ A modern B2B SaaS platform that analyzes Bills of Materials (BOMs) for geopoliti
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/CAMBER.git
+git clone https://github.com/jdotku/CAMBER.git
 cd CAMBER
 
 # Install backend dependencies
@@ -81,6 +81,7 @@ CAMBER/
 │   │   └── App.js
 │   └── package.json
 └── README.md
+
 ## API Endpoints
 
 ### Health Analysis
@@ -115,8 +116,8 @@ CAMBER/
 
 **Javin** - Junior at UC Berkeley Haas School of Business
 - Email: javin@berkeley.edu
-- LinkedIn: linkedin.com/in/javin
-- GitHub: github.com/yourusername
+- LinkedIn: [linkedin.com/in/javinku](https://www.linkedin.com/in/javin-ku-059590299/?skipRedirect=true)
+- GitHub: github.com/jdotku
 
 ## License
 
