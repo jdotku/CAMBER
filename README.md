@@ -59,29 +59,6 @@ Open [http://localhost:3000](http://localhost:3000)
 4. **Find Alternatives**: Get AI-recommended part swaps
 5. **Export Report**: Download PDF for stakeholders
 
-## Project Structure
-CAMBER/
-├── backend/
-│   ├── server.js
-│   ├── utils/
-│   │   ├── claudeAnalyzer.js
-│   │   ├── scoreCalculator.js
-│   │   └── newsapi.js
-│   ├── data/
-│   │   ├── sample-bom.csv
-│   │   └── manufacturers.json
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── SimpleDashboard.js
-│   │   │   ├── DeepModeLayout.js
-│   │   │   ├── SidebarNavigation.js
-│   │   │   └── BOMStatusTab.js
-│   │   └── App.js
-│   └── package.json
-└── README.md
-
 ## API Endpoints
 
 ### Health Analysis
