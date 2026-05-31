@@ -65,9 +65,12 @@ function BOMUploader({ onUpload, isProcessing }) {
 
         </form>
 
-        <p className="sample-hint">
-          Sample file: <code>backend/data/sample-bom.csv</code>
-        </p>
+        <div className="upload-guide">
+          <p>Export your BOM as a CSV with columns: <span className="guide-cols">part_id, part_name, manufacturer, quantity, unit_cost</span>. Then upload above.</p>
+          <a className="sample-download" href="/sample-bom.csv" download="sample-bom.csv">
+            ↓ Download sample BOM
+          </a>
+        </div>
 
       </div>
     </div>

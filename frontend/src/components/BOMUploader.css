@@ -113,18 +113,34 @@
   cursor: not-allowed;
 }
 
-/* ---- SAMPLE HINT ---- */
+/* ---- UPLOAD GUIDE ---- */
 
-.sample-hint {
-  margin-top: 24px;
-  color: #444444;
+.upload-guide {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #555555;
   font-size: 11px;
+  line-height: 1.6;
+}
+
+.guide-cols {
+  color: #777777;
   font-family: 'Courier New', Courier, monospace;
 }
 
-.sample-hint code {
-  color: #666666;
+.sample-download {
+  color: #8B5CF6;
   font-size: 11px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.15s;
+}
+
+.sample-download:hover {
+  color: #A78BFA;
+  text-decoration: underline;
 }
 
 @media (max-width: 480px) {
